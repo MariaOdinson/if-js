@@ -1,12 +1,11 @@
-import {sum, colors, getNewColor} from '../src/scripts/module';
-import {randNumber} from '@ngneat/falso';
+import { sum, colors, getNewColor } from '../src/module';
+import { randNumber } from '@ngneat/falso';
 
 test('check sum function', () => {
-const a = randNumber();
-const b = randNumber();
+  const a = randNumber();
+  const b = randNumber();
 
-expect(sum(a)(b)).toBe(a+b);
-
+  expect(sum(a)(b)).toBe(a + b);
 });
 
 test('check color function', () => {
@@ -18,6 +17,4 @@ test('check color function', () => {
   expect(func()).toBe(colors[3]);
   expect(func()).toBe(colors[4]);
   expect(func()).toBe(colors[0]);
-
 });
-

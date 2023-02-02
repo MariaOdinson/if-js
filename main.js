@@ -1,4 +1,4 @@
-import { sum, getNewColor } from './module';
+import { sum, getNewColor } from './src/module';
 
 // задание 1
 
@@ -10,9 +10,9 @@ const text1 = document.getElementById('text1');
 const text2 = document.getElementById('text2');
 const text3 = document.getElementById('text3');
 
-let func1 = getNewColor();
-let func2 = getNewColor();
-let func3 = getNewColor();
+const func1 = getNewColor();
+const func2 = getNewColor();
+const func3 = getNewColor();
 
 text1.addEventListener('click', (event) => {
   event.target.style.color = func1();
