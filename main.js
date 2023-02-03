@@ -1,4 +1,4 @@
-import { sum, getNewColor } from './src/module';
+import { sum, getNewColor } from './src/module.js';
 
 // задание 1
 
