@@ -1,107 +1,27 @@
-/*let user = 'John Doe';
-const student = 'Mariia Chuchelite-Majchenko';
-let test = 1;
+import { sum, getNewColor } from './src/module.js';
 
-console.log(user);
-console.log(student);
+// задание 1
 
-user = student; //user='Mariia Chuchelite-Majchenko'
+console.log(sum(5)(2));
 
-console.log(user);
+// задание 2
 
-test++;
-test = test + '1';
-console.log(test); // 21
+const text1 = document.getElementById('text1');
+const text2 = document.getElementById('text2');
+const text3 = document.getElementById('text3');
 
-test = test - 1;
-console.log(test); // 20
+const func1 = getNewColor();
+const func2 = getNewColor();
+const func3 = getNewColor();
 
-test = Boolean(test);
+text1.addEventListener('click', (event) => {
+  event.target.style.color = func1();
+});
 
-console.log(test);
+text2.addEventListener('click', (event) => {
+  event.target.style.color = func2();
+});
 
-let x = [2, 3, 5, 8];
-let result = 1;
-
-for (let i = 0; i < x.length; i++) {
-  result *= x[i];
-}
-
-console.log(result);
-
-let y = [2, 5, 8, 15, 0, 6, 20, 3];
-
-for (let i = 0; i < y.length; i++) {
-  if (y[i] > 5 && y[i] < 10) {
-    console.log(y[i]);
-  }
-}
-
-for (let i = 0; i < y.length; i++) {
-  if (y[i] % 2 === 0) {
-    console.log(y[i]);
-  }
-}*/
-
-function min(a, b) {
-  if (a <= b) {
-    return a;
-  }
-  return b;
-}
-
-function max(a, b) {
-  if (a > b) {
-    return a;
-  }
-  return b;
-}
-
-console.log(min(2, 5));
-console.log(max(64, 20)); // задание 6
-
-function terMin(a, b) {
-  return a <= b ? a : b;
-}
-
-function terMax(a, b) {
-  return a > b ? a : b;
-}
-
-console.log(terMin(7, 10));
-console.log(terMax(18, 25)); // задание 6 (через тернарный оператор)
-
-let y = [];
-
-for (let i = 0; i < 10; i++) {
-  y[i] = Math.floor(Math.random() * 101);
-}
-
-for (let i = 0; i < 10; i++) {
-  console.log(y[i]);
-}
-
-function replace(y) {
-  for (let i = 0; i < y.length; i++) {
-    if (y[i] % 10 === 0) {
-      y[i] = (y[i] + '').replaceAll('0', 'zero');
-    }
-  }
-}
-
-replace(y);
-
-console.log(y); // задание 7
-
-function palindrom(x) {
-  let p = x.length - 1;
-  for (let i = 0; i < x.length / 2; i++) {
-    if (x[i] !== x[p]) {
-      return false;
-    }
-    p--;
-  }
-  return true;
-}
-
-console.log(palindrom('шалаш')); //задание 4
+text3.addEventListener('click', (event) => {
+  event.target.style.color = func3();
+});
